@@ -1,9 +1,6 @@
 import './NotFound.scss'
 
-// import Home from '../Home/Home'
-// import clientStore from '../../store/clientStore'
-
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 // import { useTranslation } from 'react-i18next';
 

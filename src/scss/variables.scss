@@ -1,6 +1,24 @@
-// cyber theme
-$mColorT: #fcee0a;
-$mColorT: #00f0ff;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Jura', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700;1,800;1,900&display=swap');
 
-$mColor1: #ff2931;
+// cyber theme
+$mColor: #fcee0a;
+// $mColor: #00f0ff;
+// $mColor: #ff2931;
+$mColorDarken: mix(black, $mColor, 30%);
+
 $mColor2: #2a2a2a;
+// $mColor2: #252C33;
+
+$succesColor: #0dbe87;
+$errorColor: #db4c48;
+
+$mFont: 'Rubik', sans-serif;
+$mFont2: 'Jura', sans-serif;
+
+@mixin fontSettings($family, $size, $weight) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}

@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 const About = () => {
 
   useEffect(() => {
-    document.title = "Page Not Found | Portfolio";
+    document.title = "About | Portfolio";
   }, [])
 
   return (

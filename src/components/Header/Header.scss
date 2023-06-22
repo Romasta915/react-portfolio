@@ -1,0 +1,195 @@
+@import '../../scss/variables.scss';
+
+.header {
+  background-color: mix($mColor2, rgba(0, 0, 0, 0.1), 30%);
+  color: $mColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  &__logo {
+
+    img {
+      height: 70px;
+      width: 100%;
+      background-color: $mColor;
+    }
+  }
+
+  // &__mobileBtn {}
+
+  &__nav {
+    width: 200px;
+    display: flex;
+    justify-content: right;
+
+    .menu {
+      clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
+      margin: 20px 0;
+      position: relative
+    }
+
+    .menu:before {
+      backdrop-filter: blur(8px);
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: -1
+    }
+
+    .menu-list {
+      align-items: center;
+      background: rgba(0, 0, 0, .6);
+      border: 1px solid $mColor;
+      display: flex;
+      height: 48px;
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 24px
+    }
+
+    .menu-list:before {
+      border-right: 18px solid transparent;
+      border-top: 18px solid $mColor;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0
+    }
+
+    .menu-item {
+      align-items: center;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-family: $mFont, sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      height: 100%;
+      line-height: 110%;
+      position: relative;
+      text-transform: uppercase;
+
+      & a,
+      span,
+      button {
+        // background-color: red;
+        height: 100%;
+        width: 100%;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .menu-item.menu-item-fill {
+      background: $mColor;
+      color: #000;
+      font-family: $mFont, sans-serif;
+      font-weight: 700;
+      min-width: 168px;
+      text-align: center
+    }
+
+    .menu-item.menu-item-fill a {
+      width: 100%
+    }
+
+    .menu-item.menu-item-lang {
+      background-image: linear-gradient(90deg, hsla(0, 0%, 100%, .25) 2px, transparent 0, transparent);
+      // padding: 0 25px;
+    }
+
+    .menu-item.menu-item-lang>img {
+      margin-right: 8px
+    }
+
+    .menu-item.menu-item-lang .menu-sub-list {
+      column-count: 2;
+      left: auto;
+      right: 0;
+      padding: 0 10px;
+    }
+
+    .menu-item.menu-item-lang:hover>img {
+      filter: invert(100%)
+    }
+
+    .menu-item.menu-item-lang:hover .menu-sub-list {
+      display: flex
+    }
+
+    .menu-item:hover {
+      background: $mColor;
+      color: #000
+    }
+
+    .menu-item:hover .menu-sub:after {
+      border-top: 6px solid #000
+    }
+
+    .menu-item:hover .menu-sub-list,
+    .menu-sub {
+      display: flex
+    }
+
+    .menu-sub {
+      align-items: center;
+      position: relative
+    }
+
+    .menu-sub:after {
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 6px solid #fff;
+      content: "";
+      display: block;
+      height: 6px;
+      margin-left: 4px;
+      position: relative;
+      width: 8px
+    }
+
+    .menu-sub-list {
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, .6);
+      border: 1px solid $mColor;
+      border-top: 8px solid $mColor;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 2px 16px rgba(0, 0, 0, .25);
+      clip-path: inset(0 -16px -16px -16px);
+      display: none;
+      flex-direction: column;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+      position: absolute;
+      top: calc(100% - 4px)
+    }
+
+    .menu-sub-list li {
+      align-items: center;
+      background: transparent;
+      color: #fff;
+      display: flex;
+      height: 44px;
+    }
+
+    .menu-sub-list li:before {
+      background: $mColor;
+      content: "";
+      height: 1px;
+      margin-right: 11px;
+      width: 12px
+    }
+
+    .menu-sub-list li:hover {
+      color: $mColor;
+    }
+  }
+}
