@@ -79,7 +79,7 @@ const StarCanvas = ({ ...props }) => {
     }, [])
 
     return (
-        <canvas ref={canvasRef} style={{ height: props.setHeight, width: props.setWidth }} />
+        <canvas ref={canvasRef} style={{ height: props.setHeight, width: props.setWidth, backgroundColor: "black" }} />
     )
 }
 

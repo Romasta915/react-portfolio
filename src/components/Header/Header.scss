@@ -1,22 +1,13 @@
 @import '../../scss/variables.scss';
 
 .header {
-  background-color: mix($mColor2, rgba(0, 0, 0, 0.1), 30%);
+  background-color: mix($primaryСolor, rgba(0, 0, 0, 0.1), 30%);
   color: $mColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  font-family: $mFont;
   padding: 0 20px;
-
-  &__logo {
-
-    img {
-      height: 70px;
-      width: 100%;
-      background-color: $mColor;
-    }
-  }
 
   // &__mobileBtn {}
 

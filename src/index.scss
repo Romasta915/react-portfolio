@@ -1,4 +1,83 @@
 // active global 
 @import './scss/normalize.scss';
+@import './scss/elements.scss';
 
+// active local
 @import './scss/variables.scss';
+
+body {
+  @include fontSettings($mFont, 16px, 400);
+}
+
+.logo {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    height: 70px;
+    width: 100%;
+    background-color: $mColor;
+    clip-path: polygon(0 0, 78% 0, 100% 23%, 100% 100%, 100% 100%, 23% 100%, 0 80%, 0 0);
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid $mColor2;
+    border-left: 3px solid $mColor2;
+  }
+
+  &::before {
+    content: '';
+    height: 30px;
+    width: 3px;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    background-color: white;
+    transform: rotate(-55deg);
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    height: 30px;
+    width: 3px;
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+    background-color: $mColor2;
+    transform: rotate(-61deg);
+    z-index: 1;
+  }
+}
+
+.cp-btn {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: inherit;
+  background-color: initial;
+  font-family: BlenderProBold, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  align-items: center;
+  border-style: solid;
+  border-width: 0 20px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  min-width: 232px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.cp-btn--yellow {
+  border-image: url('../src/assets/images/cp-btn-yellow.svg') 0 20 fill;
+  color: $mColor;
+}
+
+.cp-btn--cyan {
+  border-image: url('../src/assets/images/cp-btn-cyan.svg') 0 20 fill;
+  color: $mColor2;
+}
