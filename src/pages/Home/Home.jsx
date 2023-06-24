@@ -2,7 +2,7 @@ import './Home.scss'
 
 import StarCanvas from "../../components/StarCanvas/StarCanvas";
 import { useEffect } from 'react'
-import { motion, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -43,23 +43,20 @@ const Home = () => {
 			</div>
 
 			<div className="home">
-				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='99vh' /></div>
+				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
 
 				<div className='hero'>
-					<div className='hero__greetings'>
-						<div className='title'><TextAppearance text={t('home.hero-title')} delayOneChar={.1}></TextAppearance></div>
-						<div className='suptitle'><TextAppearance text={t('home.hero-suptitle')} delayOneChar={.15}></TextAppearance></div>
-
-						<a class="cp-btn cp-btn--yellow" target="_blank"><span>Кнопка</span></a>
-						<a class="cp-btn cp-btn--cyan" target="_blank"><span>Кнопка</span></a>
-
-						<button class="cybr-btn">
-							SEE WORK_
-							<span aria-hidden class="cybr-btn__glitch">SEE WORK_</span>
-							<span aria-hidden class="cybr-btn__tag">rA9</span>
-						</button>
+					<div className='greetings__wrap'>
+						<div className='greetings'>
+							<div className='title'><TextAppearance text={t('home.hero-title')} delayOneChar={.1}></TextAppearance></div>
+							<div className='suptitle'><TextAppearance text={t('home.hero-suptitle')} delayOneChar={.13}></TextAppearance></div>
+						</div>
 					</div>
+				</div>
 
+				<div className="shortAbout | row">
+					<div className="col-6 px-0"></div>
+					<div className="col-6 px-0"></div>
 				</div>
 
 			</div>

@@ -1,7 +1,9 @@
-import React from 'react'
-import styles from './About.module.scss'
+import './About.scss'
+
+import my_photo from '../../assets/images/my-photo.jpg'
 
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
 
@@ -9,10 +11,25 @@ const About = () => {
     document.title = "About | Portfolio";
   }, [])
 
+  const { t } = useTranslation();
+
   return (
-    <div>
-      <h1>About</h1>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut inventore sit laborum aspernatur vitae tenetur! Praesentium maiores recusandae eius beatae quae odio ab, distinctio placeat, molestiae rem facere vel perspiciatis, dicta numquam impedit! Totam omnis iusto veniam accusamus illo. Dolor tempore hic dolorum fugit quas ratione quaerat excepturi autem magni laboriosam quod, ad neque beatae natus vel vitae placeat, aut suscipit repellendus in rerum quasi repellat et. Eum obcaecati fugit nulla a, fuga nam ex error quasi repudiandae. Blanditiis neque voluptates non eaque laboriosam iusto voluptatibus dolorem accusantium ea aut quae unde quisquam, adipisci qui repellendus. Ut accusamus tenetur nihil.
+    <div className='about | row mx-0'>
+      <div className="col-7 | left px-0">
+        <div className='content'>
+          <h1 className='title'>{t('about.title')}</h1>
+          <div className='text'>
+            <p>{t('about.p-1')}</p>
+            <p>{t('about.p-2')}</p>
+            <p>{t('about.p-3')}</p>
+            <p>{t('about.p-4')}</p>
+            <p>{t('about.p-5')}</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-5 | right px-0">
+        <img src={my_photo} />
+      </div>
     </div>
   )
 }

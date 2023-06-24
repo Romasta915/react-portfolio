@@ -1,10 +1,7 @@
 @import '../../scss/variables.scss';
 
 .home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
+  color: white;
 
   &__bgCanvas {
     width: 100%;
@@ -13,27 +10,49 @@
     left: 0;
     z-index: -1;
     background-color: black;
-
-    border-bottom: 3px $mColor solid;
+    border-bottom: 3px black solid;
   }
 
   .hero {
-    width: 50%;
-    height: 100px;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-    &__greetings {
+    &::after {
+      background-image: url('../../assets/images/yel-razor-bot.svg');
+      bottom: -20px;
+      content: "";
+      height: 20px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      transform: rotate(180deg);
+    }
+
+    .greetings__wrap {
+      width: 100%;
+      border-bottom: 2px solid rgba(252, 238, 10, .1);
+      border-top: 2px solid rgba(252, 238, 10, .1);
+    }
+
+    .greetings {
+      width: 50%;
+      margin: 0 auto;
       text-align: center;
-      color: white;
       background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      position: relative;
+
+      background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 28px 28px;
 
       .title {
         @include fontSettings($mFont, 50px, 400);
         line-height: 53px;
-
-        .name {
-          font-family: $mFont2;
-        }
       }
 
       .suptitle {
@@ -45,43 +64,14 @@
 
   }
 
+  .shortAbout {
+    background-image: url(../../assets/images/noise-pattern.png);
+    height: 50vh;
+    --bs-gutter-x: 0;
 
-  .container {
-    position: relative;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    align-items: center;
   }
 
-  .static-element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background-color: #ff0000;
-    border-radius: 50%;
-  }
-
-  .animated-border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border: 2px solid #ff0000;
-    border-radius: 50%;
-    animation: rotate 4s linear infinite;
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 
 }

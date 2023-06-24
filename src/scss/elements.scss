@@ -1,3 +1,25 @@
+// <a class="cp-btn cp-btn--yellow" target="_blank"><span>Кнопка</span></a>
+
+// <a class="cp-btn cp-btn--cyan" target="_blank"><span>Кнопка</span></a>
+
+// <button class="cybr-btn">
+// 	SEE WORK_
+// 	<span aria-hidden class="cybr-btn__glitch">SEE WORK_</span>
+// 	<span aria-hidden class="cybr-btn__tag">rA9</span>
+// </button>
+
+// background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+// background-repeat: no-repeat;
+// background-size: 28px 28px; 
+
+// border-top: 2px solid rgba(252, 238, 10, .1);
+
+// cut corners: top-l, bot-r
+// clip-path: polygon(20% 0%, 100% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 100%, 0% 20%);
+
+// cut corners: top-r, bot-l
+// clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 20% 100%, 0% 80%, 0 0);
+
 // !e cyber buttons 
 @font-face {
   font-family: Cyber;
@@ -210,7 +232,7 @@
   width: 100%;
   display: block;
   margin: 0 auto;
-  
+
   position: absolute;
   height: 100vh;
   background-color: rgba(23, 246, 251, .3);

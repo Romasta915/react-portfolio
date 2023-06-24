@@ -1,0 +1,62 @@
+@import '../../scss/variables.scss';
+
+.about {
+  min-height: 100vh;
+  color: white;
+  background-image: url(../../assets/images/noise-pattern.png);
+  border-top: 2px solid rgba(252, 238, 10, .1);
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../assets/images/noise-pattern.png);
+  }
+
+
+  .left {
+    padding-top: 30px;
+    padding-left: 30px !important;
+
+    .content {
+      padding: 30px;
+      background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 28px 28px;
+    }
+
+    .title {
+      @include fontSettings($mFont2, 50px, 500);
+      line-height: 53px;
+    }
+
+    .text {
+      @include fontSettings($mFont, 20px, 400);
+      line-height: 23px;
+
+      p {
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+    img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 20% 100%, 0% 80%, 0 0);
+      border-top: 4px solid white;
+      border-left: 4px solid white;
+      border-right: 4px solid $mColor2;
+      border-bottom: 4px solid $mColor2;
+    }
+  }
+}

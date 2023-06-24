@@ -8,10 +8,13 @@
   justify-content: space-between;
   font-family: $mFont;
   padding: 0 20px;
+  z-index: 1;
+  position: relative;
 
   // &__mobileBtn {}
 
   &__nav {
+    position: relative;
     width: 200px;
     display: flex;
     justify-content: right;
@@ -68,13 +71,17 @@
       & a,
       span,
       button {
-        // background-color: red;
         height: 100%;
         width: 100%;
         padding: 0 25px;
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      a.active {
+        background-color: $mColor;
+        color: #000;
       }
     }
 

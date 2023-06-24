@@ -81,3 +81,8 @@ body {
   border-image: url('../src/assets/images/cp-btn-cyan.svg') 0 20 fill;
   color: $mColor2;
 }
+
+.cp-btn--red {
+  border-image: url('../src/assets/images/cp-btn-red.svg') 0 20 fill;
+  color: $mColor3;
+}

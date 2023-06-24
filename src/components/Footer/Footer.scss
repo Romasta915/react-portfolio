@@ -1,0 +1,35 @@
+@import '../../scss/variables.scss';
+
+.footer {
+  --bs-gutter-x: 0;
+  // background-image: url('../../assets/images/noise-pattern.png');
+  background-color: $primaryСolor;
+  color: white;
+  height: 50px;
+  border-top: 1px solid $mColor;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icons-cont {
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+
+    i {
+      transition: all .3s;
+
+      &:hover {
+        transition: all .3s;
+        color: $mColor;
+      }
+    }
+
+    a {
+      margin-right: 40px;
+    }
+  }
+}

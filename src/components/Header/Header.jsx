@@ -20,47 +20,49 @@ const Header = observer(() => {
     i18n.changeLanguage(language)
   }
   // const navigate = useNavigate()
-  // const activeLink = ({ isActive }) => (isActive ? 'nav-item main-link active' : 'nav-item main-link')
+  const activeLink = ({ isActive }) => (isActive ? 'menu-navlink active' : 'menu-navlink')
 
   return (
-    <header className="header | navbar navbar-expand-md">
+    <>
+      <header className="header | navbar navbar-expand-md">
 
-      <div className="logo" ><img src={logo} alt="logo here" /></div>
+        <NavLink to='/' element={<Home />}><div className="logo" ><img src={logo} alt="logo here" /></div></NavLink>
 
-      <button className="header__mobileBtn | navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerToggler" aria-controls="headerToggler" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+        <button className="header__mobileBtn | navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerToggler" aria-controls="headerToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-      <div className="header__nav collapse navbar-collapse" id="headerToggler">
-        <div class="menu">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <NavLink class="menu-sub" to='/' element={<Home />}>
-                {t('header.item1')}</NavLink>
-            </li>
+        <div className="header__nav collapse navbar-collapse" id="headerToggler">
+          <div class="menu">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <NavLink className={activeLink} to='/' element={<Home />}>
+                  {t('header.item1')}</NavLink>
+              </li>
 
-            <li class="menu-item">
-              <NavLink class="menu-sub" to='/about' element={<About />}>
-                {t('header.item2')}</NavLink>
-            </li>
+              <li class="menu-item">
+                <NavLink className={activeLink} to='/about' element={<About />}>
+                  {t('header.item2')}</NavLink>
+              </li>
 
-            <li class="menu-item">
-              <a>{t('header.item3')}</a>
-            </li>
+              <li class="menu-item">
+                <a>{t('header.item3')}</a>
+              </li>
 
-            <li class="menu-item menu-item-lang">
-              <span class="menu-sub">{clientStore.currentLang}</span>
-              <ul class="menu-sub-list">
-                <li><a onClick={() => changeLanguage('en')}>English</a></li>
-                <li><a onClick={() => changeLanguage('ua')}>Українська</a></li>
-              </ul>
-            </li>
+              <li class="menu-item menu-item-lang">
+                <span class="menu-sub">{clientStore.currentLang}</span>
+                <ul class="menu-sub-list">
+                  <li><a onClick={() => changeLanguage('en')}>English</a></li>
+                  <li><a onClick={() => changeLanguage('ua')}>Українська</a></li>
+                </ul>
+              </li>
 
-            <li class="menu-item menu-item-fill"><a href="#">
-              {t('header.сontactMe')}</a></li></ul>
+              <li class="menu-item menu-item-fill"><a href="#">
+                {t('header.сontactMe')}</a></li></ul>
+          </div>
         </div>
-      </div>
-    </header >
+      </header >
+    </>
   )
 })
 
