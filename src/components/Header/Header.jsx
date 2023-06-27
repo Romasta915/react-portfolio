@@ -6,11 +6,9 @@ import Home from '../../pages/Home/Home'
 import About from '../../pages/About/About'
 import clientStore from '../../store/clientStore'
 
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
-import alertify from 'alertifyjs'
 
 const Header = observer(() => {
 
@@ -19,7 +17,6 @@ const Header = observer(() => {
     clientStore.currentLang = language
     i18n.changeLanguage(language)
   }
-  // const navigate = useNavigate()
   const activeLink = ({ isActive }) => (isActive ? 'menu-navlink active' : 'menu-navlink')
 
   return (
@@ -33,32 +30,32 @@ const Header = observer(() => {
         </button>
 
         <div className="header__nav collapse navbar-collapse" id="headerToggler">
-          <div class="menu">
-            <ul class="menu-list">
-              <li class="menu-item">
+          <div className="menu">
+            <ul className="menu-list">
+              <li className="menu-item">
                 <NavLink className={activeLink} to='/' element={<Home />}>
                   {t('header.item1')}</NavLink>
               </li>
 
-              <li class="menu-item">
+              <li className="menu-item">
                 <NavLink className={activeLink} to='/about' element={<About />}>
                   {t('header.item2')}</NavLink>
               </li>
 
-              <li class="menu-item">
-                <a>{t('header.item3')}</a>
+              <li className="menu-item">
+                <span>{t('header.item3')}</span>
               </li>
 
-              <li class="menu-item menu-item-lang">
-                <span class="menu-sub">{clientStore.currentLang}</span>
-                <ul class="menu-sub-list">
-                  <li><a onClick={() => changeLanguage('en')}>English</a></li>
-                  <li><a onClick={() => changeLanguage('ua')}>Українська</a></li>
+              <li className="menu-item menu-item-lang">
+                <span className="menu-sub">{clientStore.currentLang}</span>
+                <ul className="menu-sub-list">
+                  <li><span onClick={() => changeLanguage('en')}>English</span></li>
+                  <li><span onClick={() => changeLanguage('ua')}>Українська</span></li>
                 </ul>
               </li>
 
-              <li class="menu-item menu-item-fill"><a href="#">
-                {t('header.сontactMe')}</a></li></ul>
+              <li className="menu-item menu-item-fill"><span>
+                {t('header.сontactMe')}</span></li></ul>
           </div>
         </div>
       </header >

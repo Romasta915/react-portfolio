@@ -1,7 +1,7 @@
 @import '../../scss/variables.scss';
 
 .about {
-  min-height: 100vh;
+  min-height: 90vh;
   color: white;
   background-image: url(../../assets/images/noise-pattern.png);
   border-top: 2px solid rgba(252, 238, 10, .1);
@@ -16,47 +16,63 @@
     background-image: url(../../assets/images/noise-pattern.png);
   }
 
+  .section1 {
 
-  .left {
-    padding-top: 30px;
-    padding-left: 30px !important;
+    .left {
+      padding-top: 30px;
+      padding-left: 30px !important;
 
-    .content {
-      padding: 30px;
-      background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
-      background-repeat: no-repeat;
-      background-size: 28px 28px;
+      .content {
+        padding: 30px;
+        background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0, linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%, linear-gradient(180deg, $mColor 2px, transparent 0) 0 0, linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+      }
+
+      .text {
+        @include fontSettings($mFont, 20px, 400);
+        line-height: 23px;
+
+        p {
+          padding-top: 10px;
+        }
+      }
     }
 
-    .title {
-      @include fontSettings($mFont2, 50px, 500);
-      line-height: 53px;
-    }
+    .right {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
 
-    .text {
-      @include fontSettings($mFont, 20px, 400);
-      line-height: 23px;
-
-      p {
-        padding-top: 10px;
+      img {
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 100%, 0% 10%);
+        border-top: 4px solid white;
+        border-left: 4px solid $mColor;
+        border-right: 4px solid $mColor2;
+        border-bottom: 4px solid $mColor;
       }
     }
   }
 
-  .right {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
+  .section2 {
+    padding-bottom: 80px;
+    
+    .title {
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 30px;
+    }
 
-    img {
-      width: 400px;
-      height: 500px;
-      object-fit: cover;
-      clip-path: polygon(0 0, 80% 0%, 100% 20%, 100% 100%, 100% 100%, 20% 100%, 0% 80%, 0 0);
-      border-top: 4px solid white;
-      border-left: 4px solid white;
-      border-right: 4px solid $mColor2;
-      border-bottom: 4px solid $mColor2;
+    .techCont {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
     }
   }
+
 }

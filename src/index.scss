@@ -86,3 +86,8 @@ body {
   border-image: url('../src/assets/images/cp-btn-red.svg') 0 20 fill;
   color: $mColor3;
 }
+
+.title {
+  @include fontSettings($mFont2, 50px, 500);
+  line-height: 53px;
+}

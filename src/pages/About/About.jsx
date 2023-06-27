@@ -1,11 +1,23 @@
 import './About.scss'
 
 import my_photo from '../../assets/images/my-photo.jpg'
+import nodeJs from '../../assets/images/icons/nodeJs.png'
+import react from '../../assets/images/icons/react.png'
+import html_css_js from '../../assets/images/icons/html-css-js.png'
+import databases from '../../assets/images/icons/databases.png'
 
+import OneTechno from '../../components/OneTechno/OneTechno'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const About = () => {
+
+  let techArr = [
+    { img: html_css_js, name: 'HTML 5, CSS 3, JS' },
+    { img: react, name: 'React' },
+    { img: nodeJs, name: 'NodeJs' },
+    { img: databases, name: 'MongoDB' },
+  ]
 
   useEffect(() => {
     document.title = "About | Portfolio";
@@ -14,23 +26,37 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='about | row mx-0'>
-      <div className="col-7 | left px-0">
-        <div className='content'>
-          <h1 className='title'>{t('about.title')}</h1>
-          <div className='text'>
-            <p>{t('about.p-1')}</p>
-            <p>{t('about.p-2')}</p>
-            <p>{t('about.p-3')}</p>
-            <p>{t('about.p-4')}</p>
-            <p>{t('about.p-5')}</p>
+    <div className='about'>
+      <section className='section1 | row mx-0'>
+        <div className="col-7 | left px-0">
+          <div className='content'>
+            <div className='title'>{t('about.title')}</div>
+            <div className='text'>
+              <p>{t('about.p-1')}</p>
+              <p>{t('about.p-2')}</p>
+              <p>{t('about.p-3')}</p>
+              <p>{t('about.p-4')}</p>
+              <p>{t('about.p-5')}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-5 | right px-0">
-        <img src={my_photo} />
-      </div>
+        <div className="col-5 | right px-0">
+          <img src={my_photo} alt='my_photo' />
+        </div>
+      </section>
+      <section className='section2'>
+        <div className='title'>{t('about.techIuse')}</div>
+        <div className='techCont'>
+          {
+            techArr.map((e) => {
+              return <OneTechno key={e.img} img={e.img} name={e.name} />
+            })
+          }
+        </div>
+      </section>
     </div>
+
+
   )
 }
 
