@@ -16,10 +16,9 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import './i18n'
-// import 'dotenv/config'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(process.env);
+
 root.render(
   <React.StrictMode>
     <Suspense fallback={

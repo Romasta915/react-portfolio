@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo.png'
 
 import Home from '../../pages/Home/Home'
 import About from '../../pages/About/About'
+import Projects from '../../pages/Projects/Projects'
 import clientStore from '../../store/clientStore'
 
 import { NavLink } from 'react-router-dom'
@@ -43,7 +44,8 @@ const Header = observer(() => {
               </li>
 
               <li className="menu-item">
-                <span>{t('header.item3')}</span>
+                <NavLink className={activeLink} to='/projects' element={<Projects />}>
+                  {t('header.item3')}</NavLink>
               </li>
 
               <li className="menu-item menu-item-lang">

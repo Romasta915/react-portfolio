@@ -4,6 +4,7 @@ import Layot from './components/Layot/Layot'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import NotFound from './pages/NotFound/NotFound'
+import Projects from './pages/Projects/Projects';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import { useTranslation } from 'react-i18next';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Layot />}>
             <Route index element={<Home />} />
             <Route path='about' element={<About />} />
+            <Route path='projects' element={<Projects />} />
             <Route path='*' element={<NotFound />} />
           </Route>
 

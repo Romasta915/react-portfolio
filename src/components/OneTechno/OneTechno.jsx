@@ -4,11 +4,11 @@ const OneTechno = (props) => {
 
   return (
     <>
-      <div className='oneTech' title={props.name}>
+      <div className='oneTech movingBorder' title={props.name}>
         <img src={props.img} alt="techology" />
       </div>
       <div className='moreAbout'>
-        
+
       </div>
     </>
   )

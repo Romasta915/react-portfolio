@@ -10,10 +10,12 @@ import git from '../../assets/images/icons/git.png'
 import os from '../../assets/images/icons/os.png'
 import ide from '../../assets/images/icons/vs-code.png'
 import postman from '../../assets/images/icons/postman-api.png'
+import site from '../../assets/images/icons/site.png'
 
 import OneTechno from '../../components/OneTechno/OneTechno'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import axios from 'axios'
 
 const About = () => {
 
@@ -29,9 +31,8 @@ const About = () => {
     { img: os, name: 'Windows 11' },
     { img: ide, name: 'VS Code' },
     { img: postman, name: 'Postman' },
+    { img: site, name: 'Also, many others...' },
   ]
-
-
 
   useEffect(() => {
     document.title = "About | Portfolio";
@@ -79,7 +80,6 @@ const About = () => {
             }
           </div>
         </div>
-
       </section>
     </div>
 
