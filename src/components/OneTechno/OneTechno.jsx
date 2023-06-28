@@ -7,6 +7,9 @@ const OneTechno = (props) => {
       <div className='oneTech' title={props.name}>
         <img src={props.img} alt="techology" />
       </div>
+      <div className='moreAbout'>
+        
+      </div>
     </>
   )
 }

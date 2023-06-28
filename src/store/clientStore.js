@@ -9,5 +9,4 @@ class ClientStore {
 
 
 }
-
-export default new ClientStore()
+export default  new ClientStore()

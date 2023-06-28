@@ -5,6 +5,11 @@ import nodeJs from '../../assets/images/icons/nodeJs.png'
 import react from '../../assets/images/icons/react.png'
 import html_css_js from '../../assets/images/icons/html-css-js.png'
 import databases from '../../assets/images/icons/databases.png'
+import git from '../../assets/images/icons/git.png'
+
+import os from '../../assets/images/icons/os.png'
+import ide from '../../assets/images/icons/vs-code.png'
+import postman from '../../assets/images/icons/postman-api.png'
 
 import OneTechno from '../../components/OneTechno/OneTechno'
 import { useEffect } from 'react'
@@ -13,11 +18,20 @@ import { useTranslation } from 'react-i18next'
 const About = () => {
 
   let techArr = [
-    { img: html_css_js, name: 'HTML 5, CSS 3, JS' },
+    { img: html_css_js, name: 'HTML, CSS, JS' },
     { img: react, name: 'React' },
     { img: nodeJs, name: 'NodeJs' },
     { img: databases, name: 'MongoDB' },
+    { img: git, name: 'Git' },
   ]
+
+  let toolsArr = [
+    { img: os, name: 'Windows 11' },
+    { img: ide, name: 'VS Code' },
+    { img: postman, name: 'Postman' },
+  ]
+
+
 
   useEffect(() => {
     document.title = "About | Portfolio";
@@ -45,14 +59,27 @@ const About = () => {
         </div>
       </section>
       <section className='section2'>
-        <div className='title'>{t('about.techIuse')}</div>
-        <div className='techCont'>
-          {
-            techArr.map((e) => {
-              return <OneTechno key={e.img} img={e.img} name={e.name} />
-            })
-          }
+        <div className='tech'>
+          <div className='title'>{t('about.skillset')}</div>
+          <div className='techCont'>
+            {
+              techArr.map((e) => {
+                return <OneTechno key={e.img} img={e.img} name={e.name} />
+              })
+            }
+          </div>
         </div>
+        <div className="tools">
+          <div className='title'>{t('about.toolsIuse')}</div>
+          <div className='toolsCont'>
+            {
+              toolsArr.map((e) => {
+                return <OneTechno key={e.img} img={e.img} name={e.name} />
+              })
+            }
+          </div>
+        </div>
+
       </section>
     </div>
 

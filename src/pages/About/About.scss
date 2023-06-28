@@ -17,9 +17,10 @@
   }
 
   .section1 {
+    padding-top: 70px;
+    padding-bottom: 150px;
 
     .left {
-      padding-top: 30px;
       padding-left: 30px !important;
 
       .content {
@@ -42,7 +43,6 @@
     .right {
       display: flex;
       justify-content: center;
-      padding-top: 30px;
 
       img {
         width: 400px;
@@ -58,20 +58,33 @@
   }
 
   .section2 {
-    padding-bottom: 80px;
-    
-    .title {
-      display: flex;
-      justify-content: center;
-      padding-top: 100px;
-      padding-bottom: 30px;
+    padding-bottom: 30px;
+
+    .tech {
+      padding-bottom: 50px;
+
+      .title {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
     }
 
-    .techCont {
+    .tools {
+      .title {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
+    }
+
+    .techCont,
+    .toolsCont {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 80px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 200px;
     }
   }
 
