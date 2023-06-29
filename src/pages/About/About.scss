@@ -20,6 +20,17 @@
     padding-top: 70px;
     padding-bottom: 150px;
 
+    &::after {
+      background-image: url('../../assets/images/yel-razor-bot.svg');
+      bottom: -20px;
+      content: "";
+      height: 20px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      transform: rotate(180deg);
+    }
+
     .left {
       padding-left: 30px !important;
 
@@ -49,9 +60,7 @@
         height: 500px;
         object-fit: cover;
         clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 100%, 0% 10%);
-        border-top: 4px solid white;
         border-left: 4px solid $mColor;
-        border-right: 4px solid $mColor2;
         border-bottom: 4px solid $mColor;
       }
     }

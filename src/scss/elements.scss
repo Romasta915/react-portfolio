@@ -28,8 +28,9 @@
 }
 
 .cybr-btn {
-  width: 150px;
-  height: 50px;
+  padding: 10px;
+  width: 140px;
+  height: 40px;
   z-index: 2;
 
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
@@ -38,11 +39,11 @@
   --primary-lightness: 50;
   --color: hsl(0, 0%, 100%);
   --shadow-primary-hue: 180;
-  --label-size: 0.9rem;
+  --label-size: 8px;
   --shadow-secondary-hue: 60;
   --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
   --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
-  --border: 0.4rem;
+  --border: 5px;
   --shimmy-distance: 5;
   --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
   --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);

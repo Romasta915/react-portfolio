@@ -14,8 +14,9 @@ const TextAppearance = ({ text, delayOneChar }) => {
                     <motion.span
                         key={index}
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        whileInView={{ opacity: 1 }}
                         transition={{ delay: index * delayOneChar }} // Затримка для кожного символу
+                        viewport={{ once: true }}
                     >
                         {char}
                     </motion.span>

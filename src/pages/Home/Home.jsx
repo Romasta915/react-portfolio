@@ -55,15 +55,9 @@ const Home = () => {
 				</div>
 
 				<div className="shortAbout | row">
-					<div className="mLoader">
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</div>
+					{/* <div className='suptitle'> */}
+						{/* <TextAppearance text='Доброго часу доби! Ви на моєму сайті портфоліо, більше інформації на сторінці Про мене' delayOneChar={.1}></TextAppearance> */}
+					{/* </div> */}
 				</div>
 
 			</div >

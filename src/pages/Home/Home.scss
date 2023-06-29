@@ -46,7 +46,7 @@
       padding: 30px;
       position: relative;
 
-      background: linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(90deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(270deg, #fcee0a 2px, transparent 0) 100% 100%, linear-gradient(180deg, #fcee0a 2px, transparent 0) 0 0, linear-gradient(180deg, #fcee0a 2px, transparent 0) 100% 0, linear-gradient(0deg, #fcee0a 2px, transparent 0) 0 100%, linear-gradient(0deg, #fcee0a 2px, transparent 0) 100% 100%;
+      background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0, linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%, linear-gradient(180deg, $mColor 2px, transparent 0) 0 0, linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
       background-repeat: no-repeat;
       background-size: 28px 28px;
 
@@ -66,7 +66,7 @@
 
   .shortAbout {
     background-image: url(../../assets/images/noise-pattern.png);
-    min-height: 500px;
+    min-height: 100px;
     --bs-gutter-x: 0;
 
     display: flex;

@@ -50,7 +50,6 @@ body {
 }
 
 .cp-btn {
-  -webkit-text-size-adjust: 100%;
   box-sizing: inherit;
   background-color: initial;
   font-family: BlenderProBold, sans-serif;
@@ -70,6 +69,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   user-select: none;
+
 }
 
 .cp-btn--yellow {

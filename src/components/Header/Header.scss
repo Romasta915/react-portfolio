@@ -100,7 +100,11 @@
 
     .menu-item.menu-item-lang {
       background-image: linear-gradient(90deg, hsla(0, 0%, 100%, .25) 2px, transparent 0, transparent);
-      // padding: 0 25px;
+
+      &:hover {
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+      }
     }
 
     .menu-item.menu-item-lang>img {
