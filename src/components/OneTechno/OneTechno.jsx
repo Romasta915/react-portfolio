@@ -1,17 +1,16 @@
 import './OneTechno.scss'
 
-const OneTechno = (props) => {
+import { forwardRef } from 'react'
+
+import { motion } from 'framer-motion'
+
+export const OneTechno = forwardRef((props, ref) => {
 
   return (
-    <>
-      <div className='oneTech movingBorder' title={props.name}>
-        <img src={props.img} alt="techology" />
-      </div>
-      <div className='moreAbout'>
-
-      </div>
-    </>
+    <div className='oneTech movingBorder' title={props.name} ref={ref}>
+      <img src={props.img} alt="techology" />
+    </div>
   )
-}
+})
 
-export default OneTechno
+export const MoOneTechno = motion(OneTechno)

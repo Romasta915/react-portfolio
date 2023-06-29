@@ -14,25 +14,11 @@ const Home = () => {
 
 	const { t } = useTranslation();
 
-	// start animations
-	// const heroAnim = {
-	// 	hidden: {
-	// 		// x: -1000,
-	// 		opacity: 0
-	// 	},
-	// 	visible: {
-	// 		// x: 0,
-	// 		opacity: 1,
-	// 		transition: { duration: 5 }
-	// 	},
-	// }
-
 	const scaleY = {
 		initial: { opacity: 1, transform: 'scaleY(0)' },
 		animate: { opacity: 1, transform: 'scaleY(1)' },
 		transition: { duration: 1 },
 	}
-
 
 	return (
 		<>
@@ -48,15 +34,15 @@ const Home = () => {
 						viewport={{ once: true }}
 					>
 						<div className='greetings'>
-							<div className='title'><TextAppearance text={t('home.hero-title')} delayOneChar={.1}></TextAppearance></div>
-							<div className='suptitle'><TextAppearance text={t('home.hero-suptitle')} delayOneChar={.13}></TextAppearance></div>
+							<div className='title'><TextAppearance text={t('home.hero-title')} delayOneChar={.1} /></div>
+							<div className='suptitle'><TextAppearance text={t('home.hero-suptitle')} delayOneChar={.13} /></div>
 						</div>
 					</motion.div>
 				</div>
 
 				<div className="shortAbout | row">
 					{/* <div className='suptitle'> */}
-						{/* <TextAppearance text='Доброго часу доби! Ви на моєму сайті портфоліо, більше інформації на сторінці Про мене' delayOneChar={.1}></TextAppearance> */}
+					{/* <TextAppearance text='Доброго часу доби! Ви на моєму сайті портфоліо, більше інформації на сторінці Про мене' delayOneChar={.1}></TextAppearance> */}
 					{/* </div> */}
 				</div>
 

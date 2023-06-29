@@ -12,10 +12,11 @@ import ide from '../../assets/images/icons/vs-code.png'
 import postman from '../../assets/images/icons/postman-api.png'
 import site from '../../assets/images/icons/site.png'
 
-import OneTechno from '../../components/OneTechno/OneTechno'
+import { MoOneTechno } from '../../components/OneTechno/OneTechno'
+import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import axios from 'axios'
+import { motion } from 'framer-motion'
 
 const About = () => {
 
@@ -34,6 +35,18 @@ const About = () => {
     { img: site, name: 'Also, many others...' },
   ]
 
+  const opacity = {
+    initial: { opacity: 0 },
+    animate: custom => ({ opacity: 1, transition: { delay: custom * 0.2 } }),
+    transition: { duration: 2 },
+  }
+
+  const translate = {
+    initial: { opacity: 0, transform: 'translateX(100%) translateY(-100%)' },
+    animate: custom => ({ opacity: 1, transform: 'translateX(0) translateY(0)', transition: { delay: custom * 0.2 } }),
+    transition: { duration: 2 },
+  }
+
   useEffect(() => {
     document.title = "About | Portfolio";
   }, [])
@@ -45,37 +58,59 @@ const About = () => {
       <section className='section1 | row mx-0'>
         <div className="col-7 | left px-0">
           <div className='content'>
-            <div className='title'>{t('about.title')}</div>
-            <div className='text'>
-              <p>{t('about.p-1')}</p>
-              <p>{t('about.p-2')}</p>
-              <p>{t('about.p-3')}</p>
-              <p>{t('about.p-4')}</p>
-              <p>{t('about.p-5')}</p>
-            </div>
+            <div className='title'><TextAppearance text={t('about.title')} delayOneChar={.08} /></div>
+            <motion.div className='text'
+              initial='initial'
+              whileInView='animate'
+              viewport={{ once: true }}
+            >
+              <motion.p variants={opacity} custom={1}>{t('about.p-1')}</motion.p>
+              <motion.p variants={opacity} custom={2}>{t('about.p-2')}</motion.p>
+              <motion.p variants={opacity} custom={3}>{t('about.p-3')}</motion.p>
+              <motion.p variants={opacity} custom={4}>{t('about.p-4')}</motion.p>
+              <motion.p variants={opacity} custom={5}>{t('about.p-5')}</motion.p>
+            </motion.div>
           </div>
         </div>
         <div className="col-5 | right px-0">
-          <img src={my_photo} alt='my_photo' />
+          <motion.img
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}
+            variants={translate}
+            custom={1}
+            src={my_photo} alt='my_photo' />
         </div>
       </section>
       <section className='section2'>
         <div className='tech'>
-          <div className='title'>{t('about.skillset')}</div>
+          <div className='title'><TextAppearance text={t('about.skillset')} delayOneChar={.05} /></div>
           <div className='techCont'>
             {
-              techArr.map((e) => {
-                return <OneTechno key={e.img} img={e.img} name={e.name} />
+              techArr.map((e, index) => {
+                return <MoOneTechno key={e.img} img={e.img} name={e.name}
+                  initial='initial'
+                  whileInView='animate'
+                  viewport={{ once: true }}
+                  variants={opacity}
+                  custom={index}
+                />
               })
             }
           </div>
         </div>
         <div className="tools">
-          <div className='title'>{t('about.toolsIuse')}</div>
+          <div className='title'><TextAppearance text={t('about.toolsIuse')} delayOneChar={.05} /></div>
           <div className='toolsCont'>
             {
-              toolsArr.map((e) => {
-                return <OneTechno key={e.img} img={e.img} name={e.name} />
+              toolsArr.map((e, index) => {
+                return <MoOneTechno key={e.img} img={e.img} name={e.name}
+                  initial='initial'
+                  whileInView='animate'
+                  viewport={{ once: true }}
+                  variants={opacity}
+                  custom={index}
+                />
               })
             }
           </div>
