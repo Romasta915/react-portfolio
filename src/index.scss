@@ -7,6 +7,20 @@
 
 body {
   @include fontSettings($mFont, 16px, 400);
+
+  &::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $mColor;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 
 .logo {
@@ -52,7 +66,7 @@ body {
 .cp-btn {
   box-sizing: inherit;
   background-color: initial;
-  font-family: BlenderProBold, sans-serif;
+  font-family: sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -66,10 +80,8 @@ body {
   justify-content: center;
   min-width: 232px;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   user-select: none;
-
 }
 
 .cp-btn--yellow {

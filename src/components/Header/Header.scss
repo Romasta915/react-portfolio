@@ -22,7 +22,7 @@
     .menu {
       clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
       margin: 20px 0;
-      position: relative
+      position: relative;
     }
 
     .menu:before {
@@ -31,7 +31,7 @@
       height: 100%;
       position: absolute;
       width: 100%;
-      z-index: -1
+      z-index: -1;
     }
 
     .menu-list {
@@ -42,7 +42,7 @@
       height: 48px;
       list-style: none;
       margin: 0;
-      padding: 0 0 0 24px
+      padding: 0 0 0 24px;
     }
 
     .menu-list:before {
@@ -51,7 +51,16 @@
       content: "";
       left: 0;
       position: absolute;
-      top: 0
+      top: 0;
+    }
+
+    .menu-list:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-left: 20px solid transparent;
+      border-bottom: 20px solid $mColor;
     }
 
     .menu-item {
@@ -67,6 +76,13 @@
       line-height: 110%;
       position: relative;
       text-transform: uppercase;
+      transition: all .3s;
+
+      &:hover {
+        transition: all .3s;
+        background: $mColor;
+        color: #000
+      }
 
       & a,
       span,
@@ -85,76 +101,57 @@
       }
     }
 
-    .menu-item.menu-item-fill {
+    .menu-item-fill {
       background: $mColor;
       color: #000;
       font-family: $mFont, sans-serif;
       font-weight: 700;
       min-width: 168px;
-      text-align: center
-    }
+      text-align: center;
 
-    .menu-item.menu-item-fill a {
-      width: 100%
-    }
-
-    .menu-item.menu-item-lang {
-      background-image: linear-gradient(90deg, hsla(0, 0%, 100%, .25) 2px, transparent 0, transparent);
-
-      &:hover {
-        border-left: 2px solid black;
-        border-right: 2px solid black;
+      a {
+        width: 100%
       }
     }
 
-    .menu-item.menu-item-lang>img {
-      margin-right: 8px
-    }
+    .menu-item-lang {
+      border-left: 1px solid $mColor;
+      border-right: 1px solid $mColor;
 
-    .menu-item.menu-item-lang .menu-sub-list {
-      column-count: 2;
-      left: auto;
-      right: 0;
-      padding: 0 10px;
-    }
+      &:hover .menu-sub-list {
+        transition: all .3s;
+        display: flex;
+      }
 
-    .menu-item.menu-item-lang:hover>img {
-      filter: invert(100%)
-    }
-
-    .menu-item.menu-item-lang:hover .menu-sub-list {
-      display: flex
-    }
-
-    .menu-item:hover {
-      background: $mColor;
-      color: #000
-    }
-
-    .menu-item:hover .menu-sub:after {
-      border-top: 6px solid #000
-    }
-
-    .menu-item:hover .menu-sub-list,
-    .menu-sub {
-      display: flex
+      .menu-sub-list {
+        column-count: 2;
+        left: auto;
+        right: 0;
+        padding: 0 10px;
+      }
     }
 
     .menu-sub {
       align-items: center;
-      position: relative
+      position: relative;
+
+      &:after {
+        // small triangle
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid #fff;
+        content: "";
+        display: block;
+        height: 6px;
+        margin-left: 4px;
+        position: relative;
+        width: 8px;
+      }
     }
 
-    .menu-sub:after {
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      border-top: 6px solid #fff;
-      content: "";
-      display: block;
-      height: 6px;
-      margin-left: 4px;
-      position: relative;
-      width: 8px
+    .menu-item:hover .menu-sub:after {
+      // small triangle
+      border-top: 6px solid #000
     }
 
     .menu-sub-list {
@@ -171,27 +168,28 @@
       margin: 0;
       padding: 10px 0;
       position: absolute;
-      top: calc(100% - 4px)
+      top: calc(100% - 10px);
+
+      li {
+        align-items: center;
+        background: transparent;
+        color: #fff;
+        display: flex;
+        height: 44px;
+
+        &:before {
+          background: $mColor;
+          content: "";
+          height: 1px;
+          margin-right: 11px;
+          width: 12px
+        }
+
+        &:hover {
+          color: $mColor;
+        }
+      }
     }
 
-    .menu-sub-list li {
-      align-items: center;
-      background: transparent;
-      color: #fff;
-      display: flex;
-      height: 44px;
-    }
-
-    .menu-sub-list li:before {
-      background: $mColor;
-      content: "";
-      height: 1px;
-      margin-right: 11px;
-      width: 12px
-    }
-
-    .menu-sub-list li:hover {
-      color: $mColor;
-    }
   }
 }

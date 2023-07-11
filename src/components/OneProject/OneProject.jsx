@@ -2,7 +2,6 @@ import './OneProject.scss'
 
 import clientStore from '../../store/clientStore'
 
-import React from 'react'
 import { observer } from "mobx-react-lite"
 
 const OneProject = observer((props) => {
@@ -10,24 +9,23 @@ const OneProject = observer((props) => {
   const { title, description, imgPath, mainLink, toRepoLink, projectType, tags } = props.data
 
   return (
-    <div className='oneProject__wrap | col-4'>
+    <div className={`oneProject__wrap | col-4 ${projectType}`}>
       <div className='oneProject'>
-
         <div className="imgCont">
-          <img className='proj_img' src={imgPath} alt="projects img" />
+          <img className='proj_img' src={imgPath} alt={`Project image: ${title.toUpperCase()}`} />
         </div>
         <div className='content'>
-          <div className="title">{title}</div>
           <div className='description'>
-            {clientStore.currentLang === "en" ? description.en : null}
-            {clientStore.currentLang === "ua" ? description.ua : null}
-            {tags.length !== 0 ? <><br />Technologies used: {tags}</> : null}
-          </div>
+            <div className="title">{title}</div>
 
-          <div className='buttonsCont'>
+            {description.ua.length > 0 ?
+              clientStore.currentLang === "en" ? <>{description.en} <br /> <br /></> : <>{description.ua} <br /> <br /></>
+              : null}
 
-            {
-              toRepoLink.length !== 0 ?
+            {tags.length !== 0 ? <>{clientStore.currentLang === "en" ? "Technologies used: " : "Використані технології: "} {tags}</> : null}
+
+            <div className='buttonsCont'>
+              {toRepoLink.length !== 0 ?
                 <a href={toRepoLink} target="_blank">
                   <button className="cybr-btn toRepo" title="link to the repository">
                     <i className="bi bi-github"></i>
@@ -35,16 +33,16 @@ const OneProject = observer((props) => {
                       <i className="bi bi-github"></i>
                     </span>
                   </button>
-                </a> : null
-            }
+                </a> : null}
 
-            <a href={mainLink} target='_blank'>
-              <button className="toProject | cybr-btn">
-                Demo_
-                <span aria-hidden className="cybr-btn__glitch">Demo_</span>
-                <span aria-hidden className="cybr-btn__tag">rA9</span>
-              </button>
-            </a>
+              <a href={mainLink} target='_blank'>
+                <button className="toProject | cybr-btn">
+                  Demo_
+                  <span aria-hidden className="cybr-btn__glitch">Demo_</span>
+                  <span aria-hidden className="cybr-btn__tag">rA9</span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

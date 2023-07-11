@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export const OneTechno = forwardRef((props, ref) => {
 
   return (
-    <div className='oneTech movingBorder' title={props.name} ref={ref}>
+    <div className='oneTech' title={props.name} ref={ref}>
       <img src={props.img} alt="techology" />
     </div>
   )

@@ -56,8 +56,12 @@ const Header = observer(() => {
                 </ul>
               </li>
 
-              <li className="menu-item menu-item-fill"><span>
-                {t('header.сontactMe')}</span></li></ul>
+              {/* menu-item-fill */}
+              <li className="menu-item">
+                <NavLink className={activeLink} to='/contacts' element={<Projects />}>
+                  {t('header.item4')}</NavLink>
+              </li>
+            </ul>
           </div>
         </div>
       </header >

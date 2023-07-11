@@ -6,19 +6,24 @@ import react from '../../assets/images/icons/react.png'
 import html_css_js from '../../assets/images/icons/html-css-js.png'
 import databases from '../../assets/images/icons/databases.png'
 import git from '../../assets/images/icons/git.png'
+import diploma_en from '../../assets/images/diploma_en.png'
+import diploma_ua from '../../assets/images/diploma_ua.png'
 
 import os from '../../assets/images/icons/os.png'
 import ide from '../../assets/images/icons/vs-code.png'
 import postman from '../../assets/images/icons/postman-api.png'
 import site from '../../assets/images/icons/site.png'
 
-import { MoOneTechno } from '../../components/OneTechno/OneTechno'
 import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance'
-import { useEffect } from 'react'
+import { MoOneTechno } from '../../components/OneTechno/OneTechno'
+import clientStore from '../../store/clientStore'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
-const About = () => {
+import { observer } from "mobx-react-lite"
+
+const About = observer(() => {
 
   let techArr = [
     { img: html_css_js, name: 'HTML, CSS, JS' },
@@ -51,6 +56,8 @@ const About = () => {
     document.title = "About | Portfolio";
   }, [])
 
+  const [diplomaIsOpen, setDiplomaIsOpen] = useState(false);
+
   const { t } = useTranslation();
 
   return (
@@ -64,7 +71,18 @@ const About = () => {
               whileInView='animate'
               viewport={{ once: true }}
             >
-              <motion.p variants={opacity} custom={1}>{t('about.p-1')}</motion.p>
+              <motion.p variants={opacity} custom={1}>
+                {t('about.p-1')}
+                <button class="diploma-btn" type="button" data-bs-toggle="collapse" data-bs-target="#diplomaCont" aria-expanded="false" aria-controls="diplomaCont"
+                  onClick={() => setDiplomaIsOpen(!diplomaIsOpen)}>
+                  {diplomaIsOpen ? t('about.btn-diploma-hide') : t('about.btn-diploma-text')}
+                </button>
+                <div class="collapse p-0" id="diplomaCont">
+                  <div class="card card-body p-0">
+                    <img src={clientStore.currentLang === "en" ? diploma_en : diploma_ua} alt='diploma img' />
+                  </div>
+                </div>
+              </motion.p>
               <motion.p variants={opacity} custom={2}>{t('about.p-2')}</motion.p>
               <motion.p variants={opacity} custom={3}>{t('about.p-3')}</motion.p>
               <motion.p variants={opacity} custom={4}>{t('about.p-4')}</motion.p>
@@ -116,10 +134,10 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
 
 
   )
-}
+})
 
 export default About

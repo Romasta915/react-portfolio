@@ -40,12 +40,19 @@ const Home = () => {
 					</motion.div>
 				</div>
 
-				<div className="shortAbout | row">
-					{/* <div className='suptitle'> */}
-					{/* <TextAppearance text='Доброго часу доби! Ви на моєму сайті портфоліо, більше інформації на сторінці Про мене' delayOneChar={.1}></TextAppearance> */}
-					{/* </div> */}
-				</div>
+				<div className="coming">
 
+					<ul className="mLoader">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+
+					<div className='text'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></div>
+
+				</div>
 			</div >
 		</>
 	)

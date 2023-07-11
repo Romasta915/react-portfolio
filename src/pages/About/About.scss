@@ -42,15 +42,30 @@
         background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0, linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%, linear-gradient(180deg, $mColor 2px, transparent 0) 0 0, linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
         background-repeat: no-repeat;
         background-size: 28px 28px;
-      }
 
-      .text {
-        @include fontSettings($mFont, 20px, 400);
-        line-height: 23px;
+        .text {
+          @include fontSettings($mFont, 20px, 400);
+          line-height: 23px;
 
-        p {
-          padding-top: 10px;
+          p {
+            padding-top: 10px;
+          }
+
         }
+
+        .diploma-btn {
+          color: $mColor2;
+          margin-left: 10px;
+        }
+
+        .collapse {
+
+          .card-body {
+            border: 2px solid $mColor2;
+            border-radius: 0;
+          }
+        }
+
       }
     }
 
@@ -63,8 +78,10 @@
         height: 500px;
         object-fit: cover;
         clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 100%, 0% 10%);
-        border-left: 4px solid $mColor;
+        border-top: 3px solid $mColor2;
+        border-right: 3px solid $mColor2;
         border-bottom: 4px solid $mColor;
+        border-left: 4px solid $mColor;
       }
     }
   }
