@@ -1,0 +1,54 @@
+@import '../../scss/variables.scss';
+
+.contacts {
+  min-height: 85vh;
+
+  &__bgCanvas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    border-bottom: 3px black solid;
+  }
+
+  .dev-item {
+    max-width: max-content;
+    background-color: rgb(255, 255, 255, .8);
+    margin: 30px;
+    padding: 10px 40px 10px 10px;
+    transition: .5s all;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 65% 100%, 0 100%, 0% 50%);
+    border-top: 5px solid $mColor2;
+    border-right: 5px solid $mColor2;
+    border-bottom: 5px solid $mColor;
+    border-left: 20px solid $mColor;
+    font-family: $mFont2;
+    position: relative;
+
+    .copy-email {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      padding: 10px 10px 10px 100%;
+    }
+
+    &:hover {
+      border-top: 5px solid $mColor;
+      border-right: 5px solid $mColor;
+      border-bottom: 5px solid $mColor3;
+      border-left: 20px solid $mColor3;
+      transition: all .5s;
+    }
+
+    .github-btn {
+      width: 80%;
+    }
+
+    .linkedin-btn {
+      width: 50%;
+    }
+
+  }
+}

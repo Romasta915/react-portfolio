@@ -2,7 +2,6 @@
 import MotoEmporium from "../../assets/images/projects-img/MotoEmporium.png"
 import BestHomeFood from "../../assets/images/projects-img/Best-home-food.jpg"
 import LazyDog from "../../assets/images/projects-img/LazyDog.jpg"
-import AudioPlayer from "../../assets/images/projects-img/Audio-player.jpg"
 
 const ProjectsArr = [
   // hosted projects
