@@ -2,6 +2,7 @@ import './Home.scss'
 
 import StarCanvas from "../../components/StarCanvas/StarCanvas";
 import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance';
+import { scaleY } from '../../components/AnimItems/AnimPatterns'
 
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
@@ -14,19 +15,12 @@ const Home = () => {
 
 	const { t } = useTranslation();
 
-	const scaleY = {
-		initial: { opacity: 1, transform: 'scaleY(0)' },
-		animate: { opacity: 1, transform: 'scaleY(1)' },
-		transition: { duration: 1 },
-	}
-
 	return (
 		<>
 			<div className="home">
 				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
 
 				<div className='hero'>
-
 					<motion.div className='greetings__wrap'
 						variants={scaleY}
 						initial='initial'
@@ -41,7 +35,6 @@ const Home = () => {
 				</div>
 
 				<div className="coming">
-
 					<ul className="mLoader">
 						<li></li>
 						<li></li>
@@ -50,8 +43,7 @@ const Home = () => {
 						<li></li>
 					</ul>
 
-					<div className='text'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></div>
-
+					<a className='cp-btn cp-btn--cyan text' href='/notFound'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></a>
 				</div>
 			</div >
 		</>

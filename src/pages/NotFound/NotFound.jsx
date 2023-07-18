@@ -1,11 +1,14 @@
 import './NotFound.scss'
 
+import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance';
+import StarCanvas from "../../components/StarCanvas/StarCanvas";
+
 import { useEffect } from 'react'
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const NotFound = () => {
 
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.title = "Page Not Found | Portfolio";
@@ -13,7 +16,17 @@ const NotFound = () => {
 
   return (
     <div className="notFound">
-      <h1>Not Found</h1>
+      <div className='notFound__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
+
+      <ul className="mLoader">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div className='title'><TextAppearance text={t('notFound.title')} delayOneChar={.05}></TextAppearance></div>
     </div>
   )
 }

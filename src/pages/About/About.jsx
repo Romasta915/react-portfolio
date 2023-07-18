@@ -15,12 +15,13 @@ import postman from '../../assets/images/icons/postman-api.png'
 import site from '../../assets/images/icons/site.png'
 
 import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance'
-import { MoOneTechno } from '../../components/OneTechno/OneTechno'
 import clientStore from '../../store/clientStore'
+import { MoOneTechno } from '../../components/OneTechno/OneTechno'
+import { opacity, translateFromTR } from '../../components/AnimItems/AnimPatterns'
+
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-
 import { observer } from "mobx-react-lite"
 
 const About = observer(() => {
@@ -39,18 +40,6 @@ const About = observer(() => {
     { img: postman, name: 'Postman' },
     { img: site, name: 'Also, many others...' },
   ]
-
-  const opacity = {
-    initial: { opacity: 0 },
-    animate: custom => ({ opacity: 1, transition: { delay: custom * 0.2 } }),
-    transition: { duration: 2 },
-  }
-
-  const translate = {
-    initial: { opacity: 0, transform: 'translateX(100%) translateY(-100%)' },
-    animate: custom => ({ opacity: 1, transform: 'translateX(0) translateY(0)', transition: { delay: custom * 0.2 } }),
-    transition: { duration: 2 },
-  }
 
   useEffect(() => {
     document.title = "About | Portfolio";
@@ -73,12 +62,12 @@ const About = observer(() => {
             >
               <motion.p variants={opacity} custom={1}>
                 {t('about.p-1')}
-                <button class="diploma-btn" type="button" data-bs-toggle="collapse" data-bs-target="#diplomaCont" aria-expanded="false" aria-controls="diplomaCont"
+                <button className="diploma-btn" type="button" data-bs-toggle="collapse" data-bs-target="#diplomaCont" aria-expanded="false" aria-controls="diplomaCont"
                   onClick={() => setDiplomaIsOpen(!diplomaIsOpen)}>
                   {diplomaIsOpen ? t('about.btn-diploma-hide') : t('about.btn-diploma-text')}
                 </button>
-                <div class="collapse p-0" id="diplomaCont">
-                  <div class="card card-body p-0">
+                <div className="collapse p-0" id="diplomaCont">
+                  <div className="card card-body p-0">
                     <img src={clientStore.currentLang === "en" ? diploma_en : diploma_ua} alt='diploma img' />
                   </div>
                 </div>
@@ -95,7 +84,7 @@ const About = observer(() => {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
-            variants={translate}
+            variants={translateFromTR}
             custom={1}
             src={my_photo} alt='my_photo' />
         </div>
@@ -135,8 +124,6 @@ const About = observer(() => {
         </div>
       </section>
     </div >
-
-
   )
 })
 

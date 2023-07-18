@@ -3,13 +3,15 @@ import './OneProject.scss'
 import clientStore from '../../store/clientStore'
 
 import { observer } from "mobx-react-lite"
+import { forwardRef } from 'react'
+import { motion } from 'framer-motion'
 
-const OneProject = observer((props) => {
+const OneProject = observer(forwardRef((props, mainRef) => {
 
   const { title, description, imgPath, mainLink, toRepoLink, projectType, tags } = props.data
 
   return (
-    <div className={`oneProject__wrap | col-4 ${projectType}`}>
+    <div className={`oneProject__wrap | col-4 mix category-${projectType}`} ref={mainRef}>
       <div className='oneProject'>
         <div className="imgCont">
           <img className='proj_img' src={imgPath} alt={`Project image: ${title.toUpperCase()}`} />
@@ -48,6 +50,8 @@ const OneProject = observer((props) => {
       </div>
     </div>
   )
-})
+}))
 
 export default OneProject
+
+export const MoOneProject = motion(OneProject)

@@ -27,5 +27,8 @@
   },
   "projects": {
     "title": "Projects"
+  },
+  "notFound": {
+    "title": "404! This page is not found ¯\\_(ツ)_/¯"
   }
 }

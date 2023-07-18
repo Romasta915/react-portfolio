@@ -1,0 +1,28 @@
+@import '../../scss/variables.scss';
+
+.notFound {
+  min-height: 88vh;
+
+  &__bgCanvas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    border-bottom: 3px black solid;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    color: white;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    @include fontSettings($mFont2, 50px, 500);
+    line-height: 70px;
+  }
+}

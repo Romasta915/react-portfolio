@@ -77,7 +77,7 @@
       }
 
       .title {
-        @include fontSettings($mFont, 20px, 500);
+        @include fontSettings($mFont2, 20px, 500);
         line-height: 19px;
         padding: 10px 0 10px 0;
       }
@@ -97,6 +97,7 @@
         bottom: 20px;
         right: 165px;
         font-size: 20px;
+        --clip: polygon(0 0, 100% 0, 100% 100%, 0 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
       }
 
       .toProject {
