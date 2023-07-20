@@ -1,6 +1,7 @@
 import './About.scss'
 
-import my_photo from '../../assets/images/my-photo.jpg'
+import my_photo from '../../assets/images/my_photo-cyberpunk.png'
+import my_photoHover from '../../assets/images/my_photo-cyberpunkHover.png'
 import nodeJs from '../../assets/images/icons/nodeJs.png'
 import react from '../../assets/images/icons/react.png'
 import html_css_js from '../../assets/images/icons/html-css-js.png'
@@ -31,14 +32,14 @@ const About = observer(() => {
     { img: react, name: 'React' },
     { img: nodeJs, name: 'NodeJs' },
     { img: databases, name: 'MongoDB' },
-    { img: git, name: 'Git' },
+    { img: git, name: 'Git' }
   ]
 
   let toolsArr = [
     { img: os, name: 'Windows 11' },
     { img: ide, name: 'VS Code' },
     { img: postman, name: 'Postman' },
-    { img: site, name: 'Also, many others...' },
+    { img: site, name: 'Also, many others...' }
   ]
 
   useEffect(() => {
@@ -60,7 +61,7 @@ const About = observer(() => {
               whileInView='animate'
               viewport={{ once: true }}
             >
-              <motion.p variants={opacity} custom={1}>
+              <motion.div variants={opacity} custom={1}>
                 {t('about.p-1')}
                 <button className="diploma-btn" type="button" data-bs-toggle="collapse" data-bs-target="#diplomaCont" aria-expanded="false" aria-controls="diplomaCont"
                   onClick={() => setDiplomaIsOpen(!diplomaIsOpen)}>
@@ -71,7 +72,7 @@ const About = observer(() => {
                     <img src={clientStore.currentLang === "en" ? diploma_en : diploma_ua} alt='diploma img' />
                   </div>
                 </div>
-              </motion.p>
+              </motion.div>
               <motion.p variants={opacity} custom={2}>{t('about.p-2')}</motion.p>
               <motion.p variants={opacity} custom={3}>{t('about.p-3')}</motion.p>
               <motion.p variants={opacity} custom={4}>{t('about.p-4')}</motion.p>
@@ -80,13 +81,13 @@ const About = observer(() => {
           </div>
         </div>
         <div className="col-5 | right px-0">
-          <motion.img
+          <motion.div className='my-img'
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
             variants={translateFromTR}
             custom={1}
-            src={my_photo} alt='my_photo' />
+            src={my_photo} />
         </div>
       </section>
       <section className='section2'>

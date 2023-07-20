@@ -73,15 +73,22 @@
       display: flex;
       justify-content: center;
 
-      img {
+      .my-img {
+        background-image: url("../../assets/images/my_photo-cyberpunk.png");
+        background-position: 50%;
+        background-size: cover;
         width: 400px;
         height: 500px;
-        object-fit: cover;
         clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 100%, 0% 10%);
         border-top: 3px solid $mColor2;
         border-right: 3px solid $mColor2;
         border-bottom: 4px solid $mColor;
         border-left: 4px solid $mColor;
+        transition: all .3s;
+
+        &:hover {
+          background-image: url("../../assets/images/my_photo-cyberpunkHover.png");
+        }
       }
     }
   }

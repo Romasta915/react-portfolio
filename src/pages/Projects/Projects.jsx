@@ -50,8 +50,8 @@ const Projects = () => {
 
         <motion.div className='sortWrap' title='sorting options'
           variants={translateFromRight} custom={4}>
-          <button className="sort-btn | cp-btn cp-btn--yellow" data-sort="default:asc">👆</button>
-          <button className="sort-btn | cp-btn cp-btn--yellow" data-sort="default:desc">👇</button>
+          <button className="sort-btn | cp-btn cp-btn--yellow" data-sort="default:asc">👇</button>
+          <button className="sort-btn | cp-btn cp-btn--yellow" data-sort="default:desc">👆</button>
           <button className="sort-btn | cp-btn cp-btn--yellow" data-sort="random">🎲</button>
         </motion.div>
       </motion.div>

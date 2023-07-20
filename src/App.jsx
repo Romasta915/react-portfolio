@@ -8,7 +8,6 @@ import Projects from './pages/Projects/Projects';
 import Contacts from './pages/Contacts/Contacts';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import { useTranslation } from 'react-i18next';
 
 function App() {
   return (
