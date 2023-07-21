@@ -7,22 +7,48 @@
   align-items: center;
   justify-content: space-between;
   font-family: $mFont;
-  padding: 0 20px;
+  padding: 5px 20px;
   z-index: 1;
   position: relative;
 
-  // &__mobileBtn {}
+  @media (max-width: 400px) {
+    padding: 5px 10px;
+  }
+
+  // .logo in index.scss
+
+  &__mobileBtn {
+    background-color: $mColor;
+  }
 
   &__nav {
     position: relative;
     width: 200px;
     display: flex;
     justify-content: right;
+    transition: .5s all;
+
+    @media (max-width: 992px) {
+      padding: 10px 0;
+      position: absolute;
+      width: 90%;
+      top: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 500px) {
+        top: 45px;
+      }
+    }
 
     .menu {
       clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
-      margin: 20px 0;
       position: relative;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        clip-path: polygon(20% 0%, 100% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 100%, 0% 20%);
+      }
     }
 
     .menu:before {
@@ -43,6 +69,16 @@
       list-style: none;
       margin: 0;
       padding: 0 0 0 24px;
+
+      @media (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+        z-index: 5;
+      }
+
     }
 
     .menu-list:before {
@@ -78,6 +114,10 @@
       text-transform: uppercase;
       transition: all .3s;
 
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+
       &:hover {
         transition: all .3s;
         background: $mColor;
@@ -93,6 +133,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 992px) {
+          padding: 15px 0;
+        }
       }
 
       a.active {
@@ -117,6 +161,12 @@
     .menu-item-lang {
       border-left: 1px solid $mColor;
       border-right: 1px solid $mColor;
+
+      @media (max-width: 992px) {
+        order: 5;
+        border-left: 0;
+        border-right: 0;
+      }
 
       &:hover .menu-sub-list {
         transition: all .3s;
@@ -156,19 +206,33 @@
 
     .menu-sub-list {
       backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, .6);
+      background: rgba(0, 0, 0, .4);
       border: 1px solid $mColor;
       border-top: 8px solid $mColor;
       box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 2px 16px rgba(0, 0, 0, .25);
       clip-path: inset(0 -16px -16px -16px);
       display: none;
       flex-direction: column;
-      left: 0;
       list-style: none;
       margin: 0;
       padding: 10px 0;
       position: absolute;
+      left: 0;
       top: calc(100% - 10px);
+
+      @media (max-width: 992px) {
+        width: 50%;
+        top: -180%;
+        z-index: 10;
+
+        @media (max-width: 600px) {
+          width: 80%;
+        }
+
+        @media (max-width: 300px) {
+          width: 100%;
+        }
+      }
 
       li {
         align-items: center;
@@ -182,7 +246,7 @@
           content: "";
           height: 1px;
           margin-right: 11px;
-          width: 12px
+          width: 12px;
         }
 
         &:hover {
@@ -190,6 +254,5 @@
         }
       }
     }
-
   }
 }

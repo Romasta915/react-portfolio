@@ -4,21 +4,34 @@
   --bs-gutter-x: 0;
   background-image: url('../../assets/images/noise-pattern.png');
   color: white;
-  height: 50px;
+  min-height: 50px;
   border-top: 1px solid $mColor;
   position: relative;
   font-family: $mFont2;
+
+  @media (max-width: 768px) {
+    padding: 0 0 10px 0;
+    text-align: center;
+  }
 
   .item {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      padding: 10px 0 0 0;
+    }
   }
 
   .icons-cont {
     font-size: 30px;
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
 
     i {
       transition: all .3s;
@@ -31,6 +44,16 @@
 
     a {
       margin-right: 40px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      a:nth-child(1) {
+        margin-right: 40px;
+      }
     }
   }
 }

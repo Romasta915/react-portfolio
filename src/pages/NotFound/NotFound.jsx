@@ -16,7 +16,7 @@ const NotFound = () => {
 
   return (
     <div className="notFound">
-      <div className='notFound__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
+      <div className='notFound__bgCanvas'><StarCanvas setWidth='100%' setHeight='110vh' /></div>
 
       <ul className="mLoader">
         <li></li>

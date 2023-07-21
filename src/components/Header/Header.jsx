@@ -22,7 +22,7 @@ const Header = observer(() => {
 
   return (
     <>
-      <header className="header | navbar navbar-expand-md">
+      <header className="header | navbar navbar-expand-lg">
 
         <NavLink to='/' element={<Home />}><div className="logo" ><img src={logo} alt="logo here" /></div></NavLink>
 

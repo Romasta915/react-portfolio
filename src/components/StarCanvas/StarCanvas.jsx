@@ -10,7 +10,7 @@ const StarCanvas = ({ ...props }) => {
         const starsCtx = stars.getContext('2d')
 
         // global variables
-        let screen, starsElements, starsParams = { speed: 3, number: 1000, extinction: 4 };
+        let screen, starsElements, starsParams = { speed: 2, number: 700, extinction: 4 };
 
         // run stars
         setupStars();
@@ -79,7 +79,7 @@ const StarCanvas = ({ ...props }) => {
     }, [])
 
     return (
-        <canvas ref={canvasRef} style={{ minHeight: props.setHeight, width: props.setWidth, backgroundColor: "black" }} />
+        <canvas ref={canvasRef} style={{ height: props.setHeight, width: props.setWidth, backgroundColor: "black" }} />
     )
 }
 

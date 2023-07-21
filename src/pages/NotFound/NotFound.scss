@@ -13,16 +13,42 @@
     border-bottom: 3px black solid;
   }
 
+  .mLoader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.8);
+
+    @media (max-width: 300px) {
+      transform: scale(0.5);
+      top: 60%;
+    }
+  }
+
   .title {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     top: 40%;
     color: white;
-    z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     @include fontSettings($mFont2, 50px, 500);
     line-height: 70px;
+
+    @media (max-width: 960px) {
+      top: 30%;
+
+      @media (max-width: 500px) {
+        width: 80%;
+        top: 30%;
+        @include fontSettings($mFont2, 40px, 500);
+      }
+
+      @media (max-width: 300px) {
+        width: 100%;
+      }
+    }
+
   }
 }

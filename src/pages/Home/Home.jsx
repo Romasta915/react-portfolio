@@ -18,7 +18,7 @@ const Home = () => {
 	return (
 		<>
 			<div className="home">
-				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
+				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='110vh' /></div>
 
 				<div className='hero'>
 					<motion.div className='greetings__wrap'
@@ -43,7 +43,7 @@ const Home = () => {
 						<li></li>
 					</ul>
 
-					<a className='cp-btn cp-btn--cyan text' href='/notFound'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></a>
+					<a className='cp-btn cp-btn--cyan' href='/notFound'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></a>
 				</div>
 			</div >
 		</>

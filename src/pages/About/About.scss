@@ -88,6 +88,7 @@
 
         &:hover {
           background-image: url("../../assets/images/my_photo-cyberpunkHover.png");
+          transition: all .3s;
         }
       }
     }
