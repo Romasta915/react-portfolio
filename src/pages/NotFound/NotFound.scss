@@ -47,6 +47,9 @@
 
       @media (max-width: 300px) {
         width: 100%;
+        top: 50%;
+        @include fontSettings($mFont2, 25px, 500);
+        line-height: 30px;
       }
     }
 

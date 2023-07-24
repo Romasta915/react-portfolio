@@ -53,7 +53,7 @@ const About = observer(() => {
   return (
     <div className='about'>
       <section className='section1 | row mx-0'>
-        <div className="col-7 | left px-0">
+        <div className="col-lg-12 col-xl-7 | left">
           <div className='content'>
             <div className='title'><TextAppearance text={t('about.title')} delayOneChar={.08} /></div>
             <motion.div className='text'
@@ -80,7 +80,7 @@ const About = observer(() => {
             </motion.div>
           </div>
         </div>
-        <div className="col-5 | right px-0">
+        <div className="col-lg-12 col-xl-5 | right">
           <motion.div className='my-img'
             initial='initial'
             whileInView='animate'

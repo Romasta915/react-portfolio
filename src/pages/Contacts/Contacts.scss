@@ -27,12 +27,34 @@
     font-family: $mFont2;
     position: relative;
 
-    .copy-email {
-      position: absolute;
-      top: 15px;
-      right: 0;
-      padding: 10px 10px 10px 100%;
+    @media (max-width: 768px) {
+      clip-path: none;
+      margin: 10px;
+      padding: 10px;
+      overflow-x: scroll;
     }
+
+    .mail-wrap {
+      word-break: break-all;
+
+      .mail-icon {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .copy-email {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        padding: 10px 10px 10px 100%;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+
 
     &:hover {
       border-top: 5px solid $mColor;

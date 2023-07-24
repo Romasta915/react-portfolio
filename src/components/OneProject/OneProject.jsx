@@ -11,7 +11,8 @@ const OneProject = observer(forwardRef((props, mainRef) => {
   const { title, description, imgPath, mainLink, toRepoLink, projectType, tags } = props.data
 
   return (
-    <div className={`oneProject__wrap | col-4 mix category-${projectType}`} ref={mainRef}>
+    // .col-	.col-sm-	.col-md-	.col-lg-	.col-xl-
+    <div className={`oneProject__wrap mix category-${projectType} | col-12 col-md-6 col-lg-6 col-xl-4`} ref={mainRef}>
       <div className='oneProject'>
         <div className="imgCont">
           <img className='proj_img' src={imgPath} alt={`Project image: ${title.toUpperCase()}`} />

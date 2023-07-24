@@ -26,7 +26,8 @@
     "btn-diploma-hide": "Hide"
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "suptitle": "Tap on the project to see more information"
   },
   "notFound": {
     "title": "404! This page is not found ¯\\_(ツ)_/¯"

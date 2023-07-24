@@ -5,14 +5,26 @@
   height: 130px;
   padding: 10px;
   margin: 0 20px 40px 20px;
-  // border: 1px solid $mColor;
-  // border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: .3s;
 
-  background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0, linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%, linear-gradient(180deg, $mColor 2px, transparent 0) 0 0, linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
+  @media (max-width: 450px) {
+    width: 130px;
+    height: 90px;
+    padding: 10px;
+    margin: 0 10px 20px 10px;
+  }
+
+  background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0,
+  linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%,
+  linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0,
+  linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%,
+  linear-gradient(180deg, $mColor 2px, transparent 0) 0 0,
+  linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0,
+  linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%,
+  linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
   background-repeat: no-repeat;
   background-size: 10px 10px;
 

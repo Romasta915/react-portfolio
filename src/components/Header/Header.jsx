@@ -26,7 +26,8 @@ const Header = observer(() => {
 
         <NavLink to='/' element={<Home />}><div className="logo" ><img src={logo} alt="logo here" /></div></NavLink>
 
-        <button className="header__mobileBtn | navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerToggler" aria-controls="headerToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="header__mobileBtn | navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#headerToggler" aria-controls="headerToggler" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
 

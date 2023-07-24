@@ -2,9 +2,22 @@
 import MotoEmporium from "../../assets/images/projects-img/MotoEmporium.png"
 import BestHomeFood from "../../assets/images/projects-img/Best-home-food.jpg"
 import LazyDog from "../../assets/images/projects-img/LazyDog.jpg"
+import ReactPortfolio from "../../assets/images/projects-img/react-portfolio.png"
 
 const ProjectsArr = [
   // hosted projects
+  {
+    title: "React portfolio",
+    description: {
+      en: "This is portfolio. ¯\\_(ツ)_/¯",
+      ua: "Це портфоліо. ¯\\_(ツ)_/¯"
+    },
+    imgPath: ReactPortfolio,
+    mainLink: "http://rs-portfolio.rf.gd",
+    toRepoLink: "https://github.com/Romasta915/react-portfolio",
+    projectType: "react",
+    tags: "React, SCSS, i18next, FramerMotion, Mixitup, Bootstrap, MobX, Fully adaptive"
+  },
   {
     title: "MotoEmporium",
     description: {
@@ -18,6 +31,18 @@ const ProjectsArr = [
     tags: "React, Axios, MobX, Formik + Yup, I18next, react-jwt, SCSS, Bootstrap, NodeJs, MongoDB, Mongoose"
   },
   {
+    title: "LazyDog",
+    description: {
+      en: "Layout for the restaurant \"Lazy Dog\" (using the rem method).",
+      ua: "Верстка для ресторану \"Лінивий Пес\" (використовуючи rem спосіб)."
+    },
+    imgPath: LazyDog,
+    mainLink: "https://romasta915.github.io/LazyDog/index.html",
+    toRepoLink: "https://github.com/Romasta915/LazyDog",
+    projectType: "js",
+    tags: "HTML, SCSS, JS, Fully adaptive"
+  },
+  {
     title: "Best home food",
     description: {
       en: "An experimental project on using animations with regular JS",
@@ -28,18 +53,6 @@ const ProjectsArr = [
     toRepoLink: "https://github.com/Romasta915/Best_home_food",
     projectType: "js",
     tags: "HTML, CSS, JS, magicCss, SwiperJS"
-  },
-  {
-    title: "LazyDog",
-    description: {
-      en: "Layout for the restaurant \"Lazy Dog\" (using the rem method).",
-      ua: "Верстка для ресторану \"Лінивий Пес\" (використовуючи rem спосіб)."
-    },
-    imgPath: LazyDog,
-    mainLink: "https://romasta915.github.io/LazyDog/index.html",
-    toRepoLink: "https://github.com/Romasta915/LazyDog",
-    projectType: "js",
-    tags: "HTML, SCSS, JS, Mobile version"
   },
   // local projects
   // {

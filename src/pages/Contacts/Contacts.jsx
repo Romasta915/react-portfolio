@@ -24,8 +24,8 @@ const Contacts = () => {
           viewport={{ once: true }}
           variants={translateFromLeft}
           custom={1}>
-          <div className="m-1 ms-0 fs-2">
-            <i className="bi bi-envelope-at | me-2"></i>
+          <div className="mail-wrap m-1 ms-0 fs-2">
+            <i className="mail-icon bi bi-envelope-at me-2 fs-5"></i>
             romastal915@gmail.com
             <CopyItem parentClass='fs-5 copy-email' text="romastal915@gmail.com" />
           </div>

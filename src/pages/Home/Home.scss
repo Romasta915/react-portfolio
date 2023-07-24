@@ -93,16 +93,19 @@
     position: relative;
 
     @media (max-width: 500px) {
-      min-height: 300px;
-    }
+      min-height: 330px;
 
-    @media (max-width: 500px) {
       .mLoader {
         position: absolute;
-        top: 120px;
+        top: 150px;
         left: 50%;
-        transform: scale(0.5);
+        transform: scale(0.7);
+
+        @media (max-width: 300px) {
+          transform: scale(0.5);
+        }
       }
+
     }
 
     .cp-btn {

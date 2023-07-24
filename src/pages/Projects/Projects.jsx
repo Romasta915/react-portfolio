@@ -37,15 +37,17 @@ const Projects = () => {
         viewport={{ once: true }}
         variants={translateFromTop} custom={1}
       >{t('projects.title')}</motion.div>
+      <div className="suptitle">{t('projects.suptitle')}</div>
       <motion.div ref={containerRef} className="mixitup-controls"
         initial='initial'
         whileInView='animate'
         viewport={{ once: true }}>
+
         <motion.div className='filterWrap' title='filter options'
           variants={translateFromLeft} custom={2}>
           <button className="filter-btn | cp-btn cp-btn--yellow" data-filter="all">all</button>
-          <button className="filter-btn | cp-btn cp-btn--yellow" data-filter=".category-js">js</button>
           <button className="filter-btn | cp-btn cp-btn--yellow" data-filter=".category-react">react</button>
+          <button className="filter-btn | cp-btn cp-btn--yellow" data-filter=".category-js">js</button>
         </motion.div>
 
         <motion.div className='sortWrap' title='sorting options'

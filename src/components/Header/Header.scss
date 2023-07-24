@@ -21,6 +21,10 @@
     background-color: $mColor;
   }
 
+  [aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url(../../assets/images/icons/x-octagon.svg);
+  }
+
   &__nav {
     position: relative;
     width: 200px;

@@ -23,6 +23,11 @@
     padding-bottom: 84px;
     overflow: hidden;
 
+    @media (max-width: 1200px) {
+      padding-top: 0;
+      padding-bottom: 42px;
+    }
+
     &::after {
       background-image: url('../../assets/images/yel-razor-bot.svg');
       bottom: -20px;
@@ -35,13 +40,21 @@
     }
 
     .left {
-      padding-left: 30px !important;
+      padding: 30px;
+
+      @media (max-width: 1200px) {
+        padding: 10px;
+      }
 
       .content {
         padding: 30px;
         background: linear-gradient(90deg, $mColor 2px, transparent 0) 0 0, linear-gradient(90deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(270deg, $mColor 2px, transparent 0) 100% 100%, linear-gradient(180deg, $mColor 2px, transparent 0) 0 0, linear-gradient(180deg, $mColor 2px, transparent 0) 100% 0, linear-gradient(0deg, $mColor 2px, transparent 0) 0 100%, linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
         background-repeat: no-repeat;
         background-size: 28px 28px;
+
+        @media (max-width: 1200px) {
+          padding: 15px;
+        }
 
         .text {
           @include fontSettings($mFont, 20px, 400);
@@ -73,6 +86,10 @@
       display: flex;
       justify-content: center;
 
+      @media (max-width: 500px) {
+        padding: 30px 10px 10px 10px;
+      }
+
       .my-img {
         background-image: url("../../assets/images/my_photo-cyberpunk.png");
         background-position: 50%;
@@ -85,6 +102,14 @@
         border-bottom: 4px solid $mColor;
         border-left: 4px solid $mColor;
         transition: all .3s;
+
+        @media (max-width: 500px) {
+          width: 100%;
+
+          @media (max-width: 400px) {
+            height: 400px;
+          }
+        }
 
         &:hover {
           background-image: url("../../assets/images/my_photo-cyberpunkHover.png");
@@ -100,11 +125,21 @@
     .tech {
       padding-bottom: 50px;
 
+      @media (max-width: 600px) {
+        padding-bottom: 30px;
+      }
+
       .title {
         display: flex;
         justify-content: center;
         padding-top: 80px;
         padding-bottom: 30px;
+        text-align: center;
+
+        @media (max-width: 600px) {
+          @include fontSettings($mFont2, 30px, 500);
+          line-height: 33px;
+        }
       }
     }
 
@@ -113,6 +148,12 @@
         display: flex;
         justify-content: center;
         padding-bottom: 30px;
+        text-align: center;
+
+        @media (max-width: 600px) {
+          @include fontSettings($mFont2, 30px, 500);
+          line-height: 33px;
+        }
       }
     }
 
@@ -123,6 +164,22 @@
       justify-content: center;
       flex-wrap: wrap;
       padding: 0 200px;
+
+      @media (max-width: 1300px) {
+        padding: 0 150px;
+
+        @media (max-width: 1100px) {
+          padding: 0 100px;
+        }
+
+        @media (max-width: 900px) {
+          padding: 0 50px;
+        }
+
+        @media (max-width: 800px) {
+          padding: 0 10px;
+        }
+      }
     }
   }
 
