@@ -13,10 +13,17 @@
     border-bottom: 3px black solid;
   }
 
+  &__content {
+    padding: 30px;
+
+    @media (max-width: 400px) {
+      padding: 10px;
+    }
+  }
+
   .dev-item {
-    max-width: max-content;
+    height: max-content;
     background-color: rgb(255, 255, 255, .8);
-    margin: 30px;
     padding: 10px 40px 10px 10px;
     transition: .5s all;
     clip-path: polygon(0 0, 100% 0, 100% 65%, 65% 100%, 0 100%, 0% 50%);
@@ -29,7 +36,6 @@
 
     @media (max-width: 768px) {
       clip-path: none;
-      margin: 10px;
       padding: 10px;
       overflow-x: scroll;
     }
@@ -72,5 +78,26 @@
       width: 50%;
     }
 
+  }
+
+  .googleMapWrap {
+    padding-left: 50px;
+    padding-right: 0px;
+
+    @media (max-width: 1200px) {
+      height: 300px;
+      padding-left: 0;
+      padding-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 60vh;
+
+      @media (max-width: 1200px) {
+        height: 300px;
+        padding-left: 0;
+      }
+    }
   }
 }

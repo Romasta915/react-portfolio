@@ -3,6 +3,8 @@ import MotoEmporium from "../../assets/images/projects-img/MotoEmporium.png"
 import BestHomeFood from "../../assets/images/projects-img/Best-home-food.jpg"
 import LazyDog from "../../assets/images/projects-img/LazyDog.jpg"
 import ReactPortfolio from "../../assets/images/projects-img/react-portfolio.png"
+import AudioPlayer from "../../assets/images/projects-img/Audio-player.jpg"
+import MoviePedia from "../../assets/images/projects-img/MoviePedia.png"
 
 const ProjectsArr = [
   // hosted projects
@@ -16,7 +18,7 @@ const ProjectsArr = [
     mainLink: "http://rs-portfolio.rf.gd",
     toRepoLink: "https://github.com/Romasta915/react-portfolio",
     projectType: "react",
-    tags: "React, SCSS, i18next, FramerMotion, Mixitup, Bootstrap, MobX, Fully adaptive"
+    tags: "React, MobX, i18next, FramerMotion, SCSS, Mixitup, Bootstrap, Fully adaptive"
   },
   {
     title: "MotoEmporium",
@@ -28,7 +30,7 @@ const ProjectsArr = [
     mainLink: "http://motoemporium.rf.gd",
     toRepoLink: "https://github.com/Salamakha5/MotoEmporium",
     projectType: "react",
-    tags: "React, Axios, MobX, Formik + Yup, I18next, react-jwt, SCSS, Bootstrap, NodeJs, MongoDB, Mongoose"
+    tags: "React, Axios, MobX, Formik + Yup, I18next, react-jwt, SCSS, Bootstrap, NodeJs, MongoDB, Mongoose, Fully adaptive"
   },
   {
     title: "LazyDog",
@@ -53,20 +55,7 @@ const ProjectsArr = [
     toRepoLink: "https://github.com/Romasta915/Best_home_food",
     projectType: "js",
     tags: "HTML, CSS, JS, magicCss, SwiperJS"
-  },
-  // local projects
-  // {
-  //   title: "Audio Player",
-  //   description: {
-  //     en: "",
-  //     ua: ""
-  //   },
-  //   imgPath: AudioPlayer,
-  //   mainLink: window.location.origin + "/projects/Audio player/index.html",
-  //   toRepoLink: "",
-  //   projectType: "js",
-  //   tags: "HTML, SCSS, JS"
-  // }
+  }
 ]
 
 export default ProjectsArr
