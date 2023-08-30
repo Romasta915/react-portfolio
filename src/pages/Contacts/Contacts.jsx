@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 const Contacts = () => {
 
   useEffect(() => {
-    document.title = "Home | Contacts";
+    document.title = "Contacts | RS Portfolio";
   }, [])
 
   return (

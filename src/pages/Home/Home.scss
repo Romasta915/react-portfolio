@@ -23,7 +23,7 @@
 
     &::after {
       background-image: url('../../assets/images/yel-razor-bot.svg');
-      bottom: -20px;
+      bottom: -26px;
       content: "";
       height: 20px;
       left: 0;
@@ -43,7 +43,6 @@
       width: 50%;
       margin: 0 auto;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
       padding: 30px;
       position: relative;
 
@@ -62,6 +61,8 @@
       linear-gradient(0deg, $mColor 2px, transparent 0) 100% 100%;
       background-repeat: no-repeat;
       background-size: 28px 28px;
+      background-color: rgba(0, 0, 0, 0.6);
+
 
       .title {
         @include fontSettings($mFont, 50px, 400);

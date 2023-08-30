@@ -2,7 +2,7 @@ import './Projects.scss'
 
 import { MoOneProject } from '../../components/OneProject/OneProject'
 import ProjectsArr from './ProjectsArr'
-import { translateFromLeft, translateFromRight, translateFromBot, translateFromTop } from '../../components/AnimItems/AnimPatterns'
+import { translateFromLeft, translateFromRight, translateFromTop } from '../../components/AnimItems/AnimPatterns'
 
 import { useTranslation } from 'react-i18next'
 import { useEffect, useRef } from 'react'
@@ -14,11 +14,9 @@ const Projects = () => {
 
   const { t } = useTranslation();
 
-  const animArr = [translateFromLeft, translateFromRight, translateFromBot, translateFromTop]
+  const animArr = [translateFromLeft, translateFromRight, translateFromTop]
 
   useEffect(() => {
-    document.title = "Projects | Portfolio";
-
     mixitup(".filterCont", {
       selectors: {
         target: ".mix",

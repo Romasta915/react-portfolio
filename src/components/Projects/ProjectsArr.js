@@ -55,6 +55,31 @@ const ProjectsArr = [
     toRepoLink: "https://github.com/Romasta915/Best_home_food",
     projectType: "js",
     tags: "HTML, CSS, JS, magicCss, SwiperJS"
+  },
+  {
+    title: "Audio Player",
+    description: {
+      en: "Old training project, completely rewritten rewritten with TypeScript and SCSS",
+      ua: "Старий навчальний проект, повністю переписаний переписаний за допомогою TypeScript та SCSS"
+    },
+    imgPath: AudioPlayer,
+    mainLink: "https://romasta915.github.io/Audio-player",
+    toRepoLink: "https://github.com/Romasta915/Audio-player",
+    projectType: "js",
+    tags: "HTML, CSS, SCSS, JS, TypeScript"
+  },
+  // local projects
+  {
+    title: "MoviePedia",
+    description: {
+      en: "An old educational project to search for information on movies, TV series using data from the OMDb API written in jQuery",
+      ua: "Старий навчальний проект, для пошуку інформації по фільмам, серіалам використовуючи данні із OMDb API написаний на jQuery"
+    },
+    imgPath: MoviePedia,
+    mainLink: window.location.origin + "/projects/MoviePedia/index.html",
+    toRepoLink: "",
+    projectType: "js",
+    tags: "HTML, CSS, jQuery, AJAX, OMDb API"
   }
 ]
 

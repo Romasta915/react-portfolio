@@ -9,15 +9,18 @@ const StarCanvas = ({ ...props }) => {
         const stars = canvasRef.current
         const starsCtx = stars.getContext('2d')
 
-        // global variables
-        let screen, starsElements, starsParams = { speed: 2, number: 700, extinction: 4 };
+        // config variables
+        let screen, starsElements, starsParams = { speed: 2, number: 500, extinction: 4 };
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+            starsParams.number = 110
+        } else starsParams.number = 1000
 
         // run stars
         setupStars();
         updateStars();
 
         window.addEventListener('resize', () => {
-            setupStars();
+            // setupStars();
         })
 
         // star constructor

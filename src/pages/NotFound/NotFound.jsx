@@ -11,7 +11,7 @@ const NotFound = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = "Page Not Found | Portfolio";
+    document.title = "Page Not Found | RS Portfolio";
   }, [])
 
   return (

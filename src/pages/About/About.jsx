@@ -1,7 +1,6 @@
 import './About.scss'
 
 import my_photo from '../../assets/images/my_photo-cyberpunk.png'
-import my_photoHover from '../../assets/images/my_photo-cyberpunkHover.png'
 import nodeJs from '../../assets/images/icons/nodeJs.png'
 import react from '../../assets/images/icons/react.png'
 import html_css_js from '../../assets/images/icons/html-css-js.png'
@@ -29,8 +28,8 @@ const About = observer(() => {
 
   let techArr = [
     { img: html_css_js, name: 'HTML, CSS, JS' },
-    { img: react, name: 'React' },
-    { img: nodeJs, name: 'NodeJs' },
+    { img: react, name: 'React.js' },
+    { img: nodeJs, name: 'Node.js / Express.js' },
     { img: databases, name: 'MongoDB' },
     { img: git, name: 'Git' }
   ]
@@ -43,7 +42,7 @@ const About = observer(() => {
   ]
 
   useEffect(() => {
-    document.title = "About | Portfolio";
+    document.title = "About | RS Portfolio";
   }, [])
 
   const [diplomaIsOpen, setDiplomaIsOpen] = useState(false);

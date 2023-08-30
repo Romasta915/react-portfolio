@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.png'
 
 import Home from '../../pages/Home/Home'
 import About from '../../pages/About/About'
-import Projects from '../../pages/Projects/Projects'
+import Contacts from '../../pages/Contacts/Contacts'
 import clientStore from '../../store/clientStore'
 
 import { NavLink } from 'react-router-dom'
@@ -44,11 +44,6 @@ const Header = observer(() => {
                   {t('header.item2')}</NavLink>
               </li>
 
-              <li className="menu-item">
-                <NavLink className={activeLink} to='/projects' element={<Projects />}>
-                  {t('header.item3')}</NavLink>
-              </li>
-
               <li className="menu-item menu-item-lang">
                 <span className="menu-sub">{clientStore.currentLang}</span>
                 <ul className="menu-sub-list">
@@ -59,7 +54,7 @@ const Header = observer(() => {
 
               {/* menu-item-fill */}
               <li className="menu-item">
-                <NavLink className={activeLink} to='/contacts' element={<Projects />}>
+                <NavLink className={activeLink} to='/contacts' element={<Contacts />}>
                   {t('header.item4')}</NavLink>
               </li>
             </ul>

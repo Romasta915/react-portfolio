@@ -3,6 +3,8 @@ import './Home.scss'
 import StarCanvas from "../../components/StarCanvas/StarCanvas";
 import TextAppearance from '../../components/AnimItems/TextAppearance/TextAppearance';
 import { scaleY } from '../../components/AnimItems/AnimPatterns'
+import Projects from '../../components/Projects/Projects'
+import BackUpBtn from '../../components/BackUpBtn/BackUpBtn';
 
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
@@ -10,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 
 const Home = () => {
 	useEffect(() => {
-		document.title = "Home | Portfolio";
+		document.title = "Home and Projects | RS Portfolio";
 	}, [])
 
 	const { t } = useTranslation();
@@ -18,7 +20,7 @@ const Home = () => {
 	return (
 		<>
 			<div className="home">
-				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='110vh' /></div>
+				<div className='home__bgCanvas'><StarCanvas setWidth='100%' setHeight='100vh' /></div>
 
 				<div className='hero'>
 					<motion.div className='greetings__wrap'
@@ -33,19 +35,10 @@ const Home = () => {
 						</div>
 					</motion.div>
 				</div>
-
-				<div className="coming">
-					<ul className="mLoader">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-
-					<a className='cp-btn cp-btn--cyan' href='/notFound'><TextAppearance text='coming soon...' delayOneChar={.1}></TextAppearance></a>
-				</div>
 			</div >
+
+			<Projects />
+			<BackUpBtn whenShow='700' debugLine='' />
 		</>
 	)
 }

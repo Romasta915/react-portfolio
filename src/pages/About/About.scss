@@ -6,6 +6,7 @@
   background-image: url(../../assets/images/noise-pattern.png);
   border-top: 2px solid rgba(252, 238, 10, .1);
 
+  // background for header!!!
   &::before {
     content: '';
     width: 100%;
@@ -19,7 +20,7 @@
   .section1 {
     position: relative;
     min-height: 70vh;
-    padding-top: 70px;
+    padding-top: 20px;
     padding-bottom: 84px;
     overflow: hidden;
 
@@ -96,6 +97,7 @@
         background-size: cover;
         width: 400px;
         height: 500px;
+        margin-top: 50px;
         clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 100%, 0% 10%);
         border-top: 3px solid $mColor2;
         border-right: 3px solid $mColor2;

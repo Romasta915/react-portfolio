@@ -22,16 +22,16 @@ const BackUpBtn = ({ ...props }) => {
     }
 
     return (
-        <a onClick={clickHandler} >
+        <div onClick={clickHandler} >
             {
-                props.debugLine == 'true' ?
+                props.debugLine === 'true' ?
                     <div className='for-dev' style={{ top: `${props.whenShow}px` }}></div>
                     : false
             }
             <button className={scroll > props.whenShow ? 'backUpbtn active' : 'backUpbtn'}>
                 <i title='go top' className="bi bi-arrow-up-circle-fill"></i>
             </button>
-        </a >
+        </div>
     )
 }
 
